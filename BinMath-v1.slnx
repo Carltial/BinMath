@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="BinMath-v1/BinMath-v1.vcxproj" Id="7aad9714-ccf4-484c-b2df-1a402bf03d2f" />
+</Solution>

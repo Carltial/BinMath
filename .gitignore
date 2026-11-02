@@ -1,0 +1,20 @@
+# Archivos de Visual Studio
+.vs/
+*.suo
+*.user
+*.vcxproj.user
+
+# Directorios de compilación y artefactos
+[Dd]ebug/
+[Rr]elease/
+[Xx]64/
+[Ww]in32/
+ipch/
+
+# Archivos binarios y de objetos compilados
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.aps
+*.idb
