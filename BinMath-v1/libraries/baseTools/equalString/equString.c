@@ -6,4 +6,5 @@ int comparing(const char *parametro1, const char *parametro2) {
 		parametro2++;
 	}
 	return *(unsigned char*)parametro1 - *(unsigned char*)parametro2;
+
 }
