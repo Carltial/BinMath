@@ -9,7 +9,7 @@
 #include "libraries/baseTools/bufferCls/bufferCls.h"
 #include "libraries/baseTools/screenClear/screenClean.h"
 #include "libraries/man/manual.h"
-#include "libraries/fileControler/fileControler.h"
+#include "libraries/fileController/fileController.h"
 
 char err0x01[50] = "ERROR 0x01: Not able to complete operation. \n";
 
