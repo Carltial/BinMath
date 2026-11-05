@@ -25,6 +25,7 @@
     <ClCompile Include="libraries\baseTools\equalString\equString.c" />
     <ClCompile Include="libraries\baseTools\screenClear\screenClean.c" />
     <ClCompile Include="libraries\baseTools\stringMultiply\stringMultiply.c" />
+    <ClCompile Include="libraries\fileControler\fileControler.c" />
     <ClCompile Include="libraries\logos\logo.c" />
     <ClCompile Include="libraries\man\manual.c" />
   </ItemGroup>
@@ -34,6 +35,7 @@
     <ClInclude Include="libraries\baseTools\equalString\equString.h" />
     <ClInclude Include="libraries\baseTools\screenClear\screenClean.h" />
     <ClInclude Include="libraries\baseTools\stringMultiply\stringMultiply.h" />
+    <ClInclude Include="libraries\fileControler\fileControler.h" />
     <ClInclude Include="libraries\logos\logo.h" />
     <ClInclude Include="libraries\man\manual.h" />
   </ItemGroup>
