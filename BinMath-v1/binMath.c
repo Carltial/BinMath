@@ -9,6 +9,7 @@
 #include "libraries/baseTools/bufferCls/bufferCls.h"
 #include "libraries/baseTools/screenClear/screenClean.h"
 #include "libraries/man/manual.h"
+#include "libraries/fileController/fileController.h"
 
 char err0x01[50] = "ERROR 0x01: Not able to complete operation. \n";
 
@@ -20,8 +21,16 @@ int main(void) {
 	printf("\n");
 	printf("Welcome to BinMath!");
 	printf("\n");
+	printf("\n");
 	stringMultiply('=', 10);
-	//(void)getchar();
+	printf("STARTING CHECKLIST...");
+	printf("\n");
+	printf("\n");
+
+	appsFolderCheck();
+
+	printf("\n \n");
+	printf("Press enter...");
 	bufferCls();
 	
 
@@ -57,9 +66,38 @@ int main(void) {
 			}
 			else if (diccionary(10, 12, inputt) == 1) {
 				//ADD APP CALL
+				char filePath[250];
+				printf("Enter the file path: ");
+				scanf_s("%[^\n]", filePath, (unsigned int)sizeof(filePath));
+				bufferCls();
+				char endName[200];
+				printf("Enter the new file name (with extension): ");
+				scanf_s("%[^\n]", endName, (unsigned int)sizeof(endName));
+				bufferCls();
+				fileTransfer(filePath, "./apps/", endName);
 			}
 			else if (diccionary(12, 14, inputt) == 1) {
 				//APP MENU CALL
+				char appsFold[20] = "./apps/*";
+				char dllN[100];
+				char dllP[250];
+
+				direcListing(appsFold);
+
+				printf("Enter the DLL name for example DLL12.dll (enter return to quit): \n");
+				scanf_s("%[^\n]", dllN, (unsigned int)sizeof(dllN));
+				bufferCls();
+				if (diccionary(14, 17, dllN) == 1) {
+					break;
+				} 
+				else {
+
+					sprintf_s(dllP, sizeof(dllP), "./apps/%s", dllN);
+					dllLoader(dllP);
+
+				}
+				
+				
 			}
 			else {
 				printf("Unknown entry.\n");

@@ -39,6 +39,9 @@
     <ClCompile Include="libraries\baseTools\screenClear\screenClean.c">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="libraries\fileController\fileController.c">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="libraries\logos\logo.h">
@@ -60,6 +63,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="libraries\baseTools\screenClear\screenClean.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\fileController\fileController.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

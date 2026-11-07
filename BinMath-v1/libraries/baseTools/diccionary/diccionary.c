@@ -2,7 +2,7 @@
 #include "diccionary.h"
 #include "../equalString/equString.h" //Inclusión de la librería de comparación de cadenas de carácteres. 
 
-const char* diccionario_comparacion[] = { "exit", "EXIT", "h", "H", "help", "HELP", "cls", "clear", "break", "brk", "addApp", "aap", "appMenu", "amu"}; //Array de inputs admitidos por el programa.
+const char* diccionario_comparacion[] = { "exit", "EXIT", "h", "H", "help", "HELP", "cls", "clear", "break", "brk", "addApp", "aap", "appMenu", "amu", "return", "Return", "RETURN"}; //Array de inputs admitidos por el programa.
 
 
 int diccionary(const int minLim, const int maxLim, const char *inDat) {  //El programa principal pasa en su llamada a la función el valor mínimo del intervalo cerrado, el valor máximo (fuera del intervalo) y la entrada de usuario a comparar.
