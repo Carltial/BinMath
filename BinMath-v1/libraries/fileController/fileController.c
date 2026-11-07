@@ -71,8 +71,34 @@ int fileTransfer(const char* origin, const char* destination, const char* newNam
 	else {
 		printf("Unexpected error. Check the path. \n");
 		return -1;
-		printf("%s", destin);
+		//printf("%s", destin);
 	}
 	
 	
+}
+
+
+int dllLoader(const char* pathDll) {
+	typedef void (*DllItem)(void);
+
+	HMODULE hLib = LoadLibraryA(pathDll);
+	if (hLib == NULL) {
+		printf("ERROR: %lu\n", GetLastError());
+		return -1;
+	}
+
+	DllItem runPoint = (DllItem)GetProcAddress(hLib, "runPoint");
+
+	if (runPoint == NULL) {
+		printf("FATAL ERROR: function 'runPoint' not found.");
+		FreeLibrary(hLib);
+		return -2;
+	}
+
+	printf("Running DLL... \n");
+	runPoint();
+
+	FreeLibrary(hLib);
+
+	return 0;
 }

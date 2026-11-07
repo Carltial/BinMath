@@ -79,6 +79,8 @@ int main(void) {
 				//APP MENU CALL
 				char appsFold[20] = "./apps/*";
 				direcListing(appsFold);
+				char ddlP[30] = "./apps/DLL12.dll";
+				dllLoader(ddlP);
 				
 			}
 			else {
