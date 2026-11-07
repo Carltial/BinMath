@@ -73,14 +73,30 @@ int main(void) {
 				char endName[200];
 				printf("Enter the new file name (with extension): ");
 				scanf_s("%[^\n]", endName, (unsigned int)sizeof(endName));
+				bufferCls();
 				fileTransfer(filePath, "./apps/", endName);
 			}
 			else if (diccionary(12, 14, inputt) == 1) {
 				//APP MENU CALL
 				char appsFold[20] = "./apps/*";
+				char dllN[100];
+				char dllP[250];
+
 				direcListing(appsFold);
-				char ddlP[30] = "./apps/DLL12.dll";
-				dllLoader(ddlP);
+
+				printf("Enter the DLL name for example DLL12.dll (enter return to quit): \n");
+				scanf_s("%[^\n]", dllN, (unsigned int)sizeof(dllN));
+				bufferCls();
+				if (diccionary(14, 17, dllN) == 1) {
+					break;
+				} 
+				else {
+
+					sprintf_s(dllP, sizeof(dllP), "./apps/%s", dllN);
+					dllLoader(dllP);
+
+				}
+				
 				
 			}
 			else {
